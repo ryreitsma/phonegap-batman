@@ -4,7 +4,7 @@ This application is created as proof of concept for a Phonegap app, using Batman
 
 ## Running the app
 
-`python -m cors_server.py` from inside this directory.
+`python cors_server.py` from inside this directory.
 
 Now you can access this sample app from **http://localhost:8000**.
 
