@@ -1,0 +1,1 @@
+class PhonegapApp.ApplicationController extends Batman.Controller

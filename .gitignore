@@ -1,0 +1,5 @@
+.idea
+controllers/*.js
+models/*.js
+views/**/*.js
+phonegap_app.js
