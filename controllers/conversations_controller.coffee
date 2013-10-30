@@ -8,9 +8,7 @@ class PhonegapApp.ConversationsController extends PhonegapApp.ApplicationControl
   edit: (params) ->
 
   new: (params) ->
-    users = PhonegapApp.User.load()
-    #@set('conversation', Conversation.new)
-    @set('users', users)
+    @set 'users', PhonegapApp.User.get('all')
 
   create: ->
 
