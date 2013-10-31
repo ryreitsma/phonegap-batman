@@ -1,0 +1,20 @@
+<div>
+  <h3>Gesprekken</h3>
+  <a data-route="routes.messages.new">Start een bericht</a>
+</div>
+<div>
+  <ul>
+    <li data-foreach-message="messages" >
+      <img style="height: 30px;" #!{attribute_binding expect data-bind-src="message.user.avatar"#!} />
+      <h3 data-bind="message.user.name"></h3>
+      <p data-bind="message.content"></p>
+      <ul>
+        <li data-foreach-response="message.responses" >
+          <img style="height: 30px;" #!{attribute_binding expect data-bind-src="response.user.avatar"#!} />
+          <h3 data-bind="response.user.name"></h3>
+          <p data-bind="response.content"></p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

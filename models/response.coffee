@@ -1,13 +1,13 @@
-class PhonegapApp.User extends PhonegapApp.Model
-  @resourceName: 'users'
-  @storageKey: 'users'
+class PhonegapApp.Response extends PhonegapApp.Model
+  @resourceName: 'responses'
+  @storageKey: 'responses'
 
   @urlPrefix: 'https://ryreitsma.firebaseio.com/'
   urlPrefix: 'https://ryreitsma.firebaseio.com/'
   @urlSuffix: '.json'
   urlSuffix: '.json'
 
-  @encode 'name', 'email', 'avatar'
-  @hasMany 'messages'
+  @encode 'content'
+  @belongsTo 'user'
 
   @persist Batman.RestStorage

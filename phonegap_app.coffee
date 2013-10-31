@@ -1,5 +1,5 @@
 class PhonegapApp extends Batman.App
-  @resources 'conversations'
+  @resources 'messages'
   # @resources 'discounts', except: ['edit']
   # @resources 'customers', only: ['new', 'show']
 
@@ -12,6 +12,6 @@ class PhonegapApp extends Batman.App
 
   # @route 'apps/private', 'apps#private', as: 'privateApps'
 
-  @root 'conversations#index'
+  @root 'messages#index'
 
 (global ? window).PhonegapApp = PhonegapApp
