@@ -1,20 +1,25 @@
 <div>
-  <h3>Gesprekken</h3>
-  <a data-route="routes.messages.new">Start een bericht</a>
+  <h3>Berichten</h3>
 </div>
 <div>
-  <ul>
-    <li data-foreach-message="messages" >
-      <img style="height: 30px;" #!{attribute_binding expect data-bind-src="message.user.avatar"#!} />
-      <h3 data-bind="message.user.name"></h3>
-      <p data-bind="message.content"></p>
-      <ul>
-        <li data-foreach-response="message.responses" >
-          <img style="height: 30px;" #!{attribute_binding expect data-bind-src="response.user.avatar"#!} />
-          <h3 data-bind="response.user.name"></h3>
-          <p data-bind="response.content"></p>
-        </li>
-      </ul>
-    </li>
-  </ul>
+  <form data-formfor-message="controllers.messages.message" data-event-submit="controllers.messages.create">
+    <textarea data-bind="message.content" placeholder="Plaats een nieuw bericht"></textarea>
+    <input type="submit" data-event-click="controllers.messages.create" value="Plaats"/>
+  </form>
+  <div data-foreach-message="messages" >
+    <img style="height: 30px;" #!{attribute_binding expect data-bind-src="message.user.avatar"#!} />
+    <h3 data-bind="message.user.name"></h3>
+    <p data-bind="message.content"></p>
+
+    <div data-foreach-response="message.responses" style="margin-left: 50px" >
+      <img style="height: 30px;" #!{attribute_binding expect data-bind-src="response.user.avatar"#!} />
+      <h3 data-bind="response.user.name"></h3>
+      <p data-bind="response.content"></p>
+    </div>
+
+    <form data-formfor-response="controllers.responses.response" data-event-submit="controllers.responses.create">
+      <textarea data-bind="response.content" placeholder="Jouw antwoord"></textarea>
+      <input type="submit" data-event-click="controllers.responses.create" value="Verzend"/>
+    </form>
+  </div>
 </div>

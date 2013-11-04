@@ -1,17 +1,22 @@
 class PhonegapApp.MessagesController extends PhonegapApp.ApplicationController
   routingKey: 'messages'
 
-  index: (params) ->
-    @set 'messages', PhonegapApp.Message.get('all')
+  constructor: ->
+    super
+    @setMessage()
 
-  show: (params) ->
-
-  edit: (params) ->
-
-  new: (params) ->
+  index: ->
+    @set('messages', PhonegapApp.Message.get('all'))
 
   create: ->
+    @message.save( (errorSet, response) =>
+      if errorSet is undefined
+        @messages.add(response)
+        @setMessage()
+    )
 
-  update: ->
 
-  destroy: (params) ->
+  setMessage: ->
+    message = new PhonegapApp.Message()
+    message.user = PhonegapApp.currentUser
+    @set('message', message)
