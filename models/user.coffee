@@ -1,5 +1,5 @@
 class PhonegapApp.User extends PhonegapApp.Model
-  @resourceName: 'users'
+  @resourceName: 'user'
   @storageKey: 'users'
 
   @encode 'name', 'email', 'avatar'

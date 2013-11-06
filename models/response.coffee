@@ -1,5 +1,5 @@
 class PhonegapApp.Response extends PhonegapApp.Model
-  @resourceName: 'responses'
+  @resourceName: 'response'
   @storageKey: 'responses'
 
   @encode 'content'
