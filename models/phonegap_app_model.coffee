@@ -1,9 +1,9 @@
 class PhonegapApp.Model extends Batman.Model
-  @urlPrefix: 'https://ryreitsma.firebaseio.com/'
-  urlPrefix: 'https://ryreitsma.firebaseio.com/'
+  @urlPrefix: 'http://localhost:3000'
+  urlPrefix: 'http://localhost:3000'
   @urlSuffix: '.json'
   urlSuffix: '.json'
 
   @serializeAsForm: false
 
-  @persist PhonegapApp.RestStorage
+  @persist Batman.RailsStorage

@@ -1,7 +1,8 @@
 class PhonegapApp.Message extends PhonegapApp.Model
-  @resourceName: 'messages'
+  @resourceName: 'message'
   @storageKey: 'messages'
 
-  @encode 'content'
+  @encode 'content', 'id'
+
   @hasMany 'responses'
   @belongsTo 'user'

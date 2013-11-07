@@ -4,3 +4,4 @@ models/*.js
 views/**/*.js
 lib/*.js
 phonegap_app.js
+.sass-cache

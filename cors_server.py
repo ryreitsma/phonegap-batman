@@ -42,6 +42,7 @@ class CORSHTTPRequestHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
         self.send_header("Content-Length", str(fs[6]))
         self.send_header("Last-Modified", self.date_time_string(fs.st_mtime))
         self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Access-Control-Request-Method", "*")
         self.end_headers()
         return f
 

@@ -6,17 +6,18 @@ class PhonegapApp.MessagesController extends PhonegapApp.ApplicationController
     @setMessage()
 
   index: ->
-    @set('messages', PhonegapApp.Message.get('all'))
+    @set('messages', PhonegapApp.Message.get('all').sortedBy('id', 'desc'))
 
   create: ->
-    @message.save( (errorSet, response) =>
+    @message.set("user", PhonegapApp.currentUser)
+
+    @message.save( (errorSet, resultSet) =>
       if errorSet is undefined
-        @messages.add(response)
+        @messages.add(resultSet)
         @setMessage()
     )
 
 
   setMessage: ->
     message = new PhonegapApp.Message()
-    message.user = PhonegapApp.currentUser
     @set('message', message)
