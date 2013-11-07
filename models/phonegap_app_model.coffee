@@ -6,4 +6,4 @@ class PhonegapApp.Model extends Batman.Model
 
   @serializeAsForm: false
 
-  @persist Batman.RestStorage
+  @persist Batman.RailsStorage
