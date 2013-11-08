@@ -1,19 +1,12 @@
 class PhonegapApp.ResponsesController extends PhonegapApp.ApplicationController
   routingKey:'responses'
 
-  constructor: ->
-    super
-    @setResponse()
+  create: (message) ->
+    response = message.get("response")
+    response.set("user", PhonegapApp.currentUser)
 
-  create: (params) ->
-    @response.save( (errorSet, response) =>
+    response.save( (errorSet, resultSet) =>
       if errorSet is undefined
-        #TODO: message model updaten met nieuwe response
-        @setResponse()
-
+       message.set("response", message.buildResponse())
+       message.addResponse(resultSet)
     )
-
-  setResponse: ->
-    response = new PhonegapApp.Response()
-    response.user = PhonegapApp.currentUser
-    @set('response', response)
