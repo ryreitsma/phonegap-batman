@@ -6,3 +6,15 @@ class PhonegapApp.Message extends PhonegapApp.Model
 
   @hasMany 'responses'
   @belongsTo 'user'
+
+  constructor: ->
+    super
+    @set('response', @buildResponse())
+
+  buildResponse: ->
+    response = new PhonegapApp.Response()
+    response.set("message", @)
+    response
+
+  addResponse: (response) ->
+    @get("responses").add(response)
