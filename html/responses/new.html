@@ -1,4 +1,15 @@
-<form data-formfor-response="controllers.responses.response" data-event-submit="controllers.responses.create">
-  <textarea data-bind="response.content" placeholder="Jouw antwoord"></textarea>
-  <input type="submit" data-event-click="controllers.responses.create" value="Verzend"/>
-</form>
+<div class="form-container">
+	<form role="form" class="response-form" data-formfor-response="controllers.responses.response" data-event-submit="controllers.responses.create">
+	  <div class="form-group">
+
+		  <div class="form-group">
+		    <textarea data-bind="response.content" placeholder="Jouw antwoord"></textarea>
+			</div>
+
+		  <div class="form-group">
+		    <input class="btn btn-sm btn-primary" type="submit" data-event-click="controllers.responses.create" value="Plaats reactie"/>
+			</div>
+
+	  </div>
+	</form>
+</div>

@@ -1,0 +1,19 @@
+@mixin borderize($color: gray, $style: solid, $width:1px) {
+  border-color: $color;
+  border-style: $style;
+  border-width: $width;
+}
+
+@mixin addTopBottomSpace($space: 10px){
+  margin-top: $space;
+  margin-bottom: $space;
+}
+
+// Calculate something
+// For example: ((100% / 3) -10px)
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -o-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
