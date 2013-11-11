@@ -1,0 +1,196 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../.rvm/gems/ruby-1.9.3-p374@coconut/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../.rvm/gems/ruby-1.9.3-p374@coconut/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../.rvm/gems/ruby-1.9.3-p374@coconut/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../.rvm/gems/ruby-1.9.3-p374@coconut/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../.rvm/gems/ruby-1.9.3-p374@coconut/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../.rvm/gems/ruby-1.9.3-p374@coconut/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../.rvm/gems/ruby-1.9.3-p374@coconut/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../.rvm/gems/ruby-1.9.3-p374@coconut/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../.rvm/gems/ruby-1.9.3-p374@coconut/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 1, ../sass/_typography.scss */
+body {
+  font-family: 'Cabin', monospace;
+}
+
+/* line 22, ../sass/_mixins.scss */
+.clearfix:after, .clearfix:before {
+  content: "";
+  display: table;
+}
+/* line 26, ../sass/_mixins.scss */
+.clearfix:after {
+  clear: both;
+}
+/* line 29, ../sass/_mixins.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/* line 8, ../sass/screen.scss */
+body {
+  padding: 20px;
+  background-color: #c9ecff;
+}
+
+/* line 13, ../sass/screen.scss */
+textarea {
+  width: 100%;
+  min-height: 60px;
+  resize: none;
+}
+
+/* line 19, ../sass/screen.scss */
+form {
+  margin-top: 10px;
+}
+
+/* line 23, ../sass/screen.scss */
+.message {
+  margin-top: 20px;
+  background-color: #d6d6d6;
+  border-color: gray;
+  border-style: solid;
+  border-width: 1px;
+  -webkit-border-radius: 4px 4px;
+  -moz-border-radius: 4px / 4px;
+  border-radius: 4px / 4px;
+  margin-bottom: 20px;
+}
+
+/* line 31, ../sass/screen.scss */
+.avatar {
+  margin: 15px;
+  margin-bottom: 20px;
+  float: left;
+  border-color: gray;
+  border-style: solid;
+  border-width: 1px;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  /* line 31, ../sass/screen.scss */
+  .avatar {
+    max-width: 60px;
+    max-height: 60px;
+  }
+}
+@media (min-width: 768px) {
+  /* line 31, ../sass/screen.scss */
+  .avatar {
+    max-width: 90px;
+    max-height: 90px;
+  }
+}
+
+/* line 50, ../sass/screen.scss */
+.name {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+/* line 54, ../sass/screen.scss */
+.message-body, reactie-body {
+  float: left;
+  padding: 12px;
+}
+@media (max-width: 767px) {
+  /* line 54, ../sass/screen.scss */
+  .message-body, reactie-body {
+    width: -moz-calc(100% - 105px);
+    width: -o-calc(100% - 105px);
+    width: -webkit-calc(100% - 105px);
+    width: calc(100% - 105px);
+  }
+}
+@media (min-width: 768px) {
+  /* line 54, ../sass/screen.scss */
+  .message-body, reactie-body {
+    width: -moz-calc(100% - 155px);
+    width: -o-calc(100% - 155px);
+    width: -webkit-calc(100% - 155px);
+    width: calc(100% - 155px);
+  }
+}
+
+/* line 67, ../sass/screen.scss */
+.reactie {
+  padding-left: 55px;
+}
+/* line 22, ../sass/_mixins.scss */
+.reactie:after, .reactie:before {
+  content: "";
+  display: table;
+}
+/* line 26, ../sass/_mixins.scss */
+.reactie:after {
+  clear: both;
+}
+/* line 29, ../sass/_mixins.scss */
+.reactie {
+  *zoom: 1;
+}
+/* line 70, ../sass/screen.scss */
+.reactie .reactie-body {
+  margin-top: 15px;
+}

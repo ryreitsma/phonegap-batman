@@ -1,10 +1,2 @@
 .idea
-controllers/*.js
-models/*.js
-views/**/*.js
-lib/*.js
-phonegap_app.js
 .sass-cache
-css/screen.css
-css/print.css
-css/ie.css
