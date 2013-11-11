@@ -16,9 +16,3 @@ class PhonegapApp extends Batman.App
   @root 'messages#index'
 
 (global ? window).PhonegapApp = PhonegapApp
-
-PhonegapApp.on('run', ->
-  PhonegapApp.User.find(14, (errorSet, response) =>
-    PhonegapApp.currentUser = response
-  )
-)
