@@ -1,53 +1,59 @@
 <div class="container">
-	<div class="row">
-		<div class="message col-xs-12">
-	    <form role="form" data-formfor-message="controllers.messages.message" data-event-submit="controllers.messages.create">
-		    <div class="form-group">
-		      <label for="mainBerichten">Berichten</label>
-			    <textarea class="form-control" id="mainBerichten" data-bind="message.content" placeholder="Plaats een nieuw bericht"></textarea>
-			  </div>
-		    <div class="form-group">
-	        <input class="btn btn-primary btn-lg" type="submit" data-event-click="controllers.messages.create" value="Plaats"/>
-		    </div>
-	    </form>
-	  </div>
-	</div>
+  <div class="row">
+    <div class="message col-xs-12">
+      <form role="form" data-formfor-message="controllers.messages.message"
+            data-event-submit="controllers.messages.create">
+        <div class="form-group">
+          <label for="mainBerichten">Berichten</label>
+          <textarea class="form-control" id="mainBerichten" data-bind="message.content"
+                    placeholder="Plaats een nieuw bericht"></textarea>
+        </div>
+        <div class="form-group">
+          <input class="btn btn-primary btn-lg" type="submit" data-event-click="controllers.messages.create"
+                 value="Plaats"/>
+        </div>
+      </form>
+    </div>
+  </div>
 
-	<div data-foreach-message="messages" >
-		<div class="row">
-			<div class="message col-xs-12 col-md-12">
+  <div data-foreach-message="messages">
+    <div class="row">
+      <div class="message col-xs-12 col-md-12">
 
-				<h3 class="name" data-bind="message.user.name"></h3>
-				<div class="row">
-					<div class="avatar">
-						<img class="img-responsive" #!{attribute_binding expect data-bind-src="message.user.avatar"#!} />
-			    </div>
+        <h3 class="name" data-bind="message.user.name"></h3>
 
-				  <div class="message-body">
-						<p data-bind="message.content"></p>
-				  </div>
-				</div>
+        <div class="row">
+          <div class="avatar">
+            <img class="img-responsive" #!{attribute_binding expect data-bind-src="message.user.avatar"#!} />
+          </div>
 
-		    <div data-foreach-response="message.responses">
+          <div class="message-body">
+            <p data-bind="message.content"></p>
+          </div>
+        </div>
+
+        <div data-foreach-response="message.responses">
           <div class="row">
             <div class="reactie col-xs-12 col-md-12">
               <hr>
               <h3 data-bind="response.user.name"></h3>
+
               <div class="row">
                 <div class="avatar">
                   <img class="img-responsive" #!{attribute_binding expect data-bind-src="response.user.avatar"#!} />
-		            </div>
+                </div>
 
                 <div class="reactie-body">
                   <p data-bind="response.content"></p>
                 </div>
               </div>
-		        </div>
+            </div>
           </div>
         </div>
+        <div data-partial="responses/new"></div>
+      </div>
+    </div>
+  </div>
 
-		    <div data-partial="responses/new"></div>
-			</div>
-		</div>
-	</div>
+  <div data-partial="messages/switch_user"></div>
 </div>

@@ -4,6 +4,7 @@ class PhonegapApp.MessagesController extends PhonegapApp.ApplicationController
   constructor: ->
     super
     @setMessage()
+    @setSelectedUser(15)
 
   index: ->
     @set('messages', PhonegapApp.Message.get('all').sortedBy('id', 'desc'))
@@ -21,3 +22,11 @@ class PhonegapApp.MessagesController extends PhonegapApp.ApplicationController
   setMessage: ->
     message = new PhonegapApp.Message()
     @set('message', message)
+
+  setSelectedUser: (id) ->
+    PhonegapApp.User.find(id, (errorSet, response) =>
+      @set('selectedUser', response)
+      PhonegapApp.set("currentUser", response)
+      @selectedUser.observeOnce 'id', (id) =>
+        @setSelectedUser(id)
+    )

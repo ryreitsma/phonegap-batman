@@ -1,0 +1,6 @@
+<div class="form-container">
+  <label for="select_current_user">Kies afzender:</label>
+  <select data-bind="selectedUser.id" id="select_current_user">
+    <option data-foreach-user="User.all" data-bind-label="user.name" data-bind-value="user.id"></option>
+  </select>
+</div>
