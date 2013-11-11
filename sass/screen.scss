@@ -33,13 +33,17 @@ form {
   margin-bottom: 20px;
   float: left;
   @include borderize();
+  position: relative;
+  overflow: hidden;
 
   @media (max-width: $screen-xs-max) {
     max-width: 60px;
+    max-height: 60px;
   }
 
   @media (min-width: $screen-sm-min) {
     max-width: 90px;
+    max-height: 90px;
   }
 }
 
@@ -47,17 +51,24 @@ form {
   @include addTopBottomSpace(7px);
 }
 
-.message-body {
+.message-body, reactie-body {
   float: left;
+  padding:12px;
 
   @media (max-width: $screen-xs-max) {
-    @include calc(width, "100% - 95px");
+    @include calc(width, "100% - 105px");
   }
 
   @media (min-width: $screen-sm-min) {
-    @include calc(width, "100% - 135px");
+    @include calc(width, "100% - 155px");
   }
+}
 
-  padding:12px;
+.reactie {
+  padding-left: 55px;
+  @include clearfix;
+  .reactie-body {
+    margin-top:15px;
+  }
 }
 

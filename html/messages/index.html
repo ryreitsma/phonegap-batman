@@ -29,10 +29,22 @@
 				</div>
 
 		    <div data-foreach-response="message.responses">
-		      <img style="height: 30px;" #!{attribute_binding expect data-bind-src="response.user.avatar"#!} />
-		      <h3 data-bind="response.user.name"></h3>
-		      <p data-bind="response.content"></p>
-		    </div>
+          <div class="row">
+            <div class="reactie col-xs-12 col-md-12">
+              <hr>
+              <h3 data-bind="response.user.name"></h3>
+              <div class="row">
+                <div class="avatar">
+                  <img class="img-responsive" #!{attribute_binding expect data-bind-src="response.user.avatar"#!} />
+		            </div>
+
+                <div class="reactie-body">
+                  <p data-bind="response.content"></p>
+                </div>
+              </div>
+		        </div>
+          </div>
+        </div>
 
 		    <div data-view="ResponsesNewView"></div>
 			</div>
