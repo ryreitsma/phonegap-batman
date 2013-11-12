@@ -16,7 +16,7 @@
     Roelof Reitsma
   </author>
 
-  <icon src="img/batman_logo.png" />
+  <icon src="img/coconut_logo.png" />
   <gap:splash src="img/splash.png" />
   <gap:platform name="android"/>
   <access origin="*" />
