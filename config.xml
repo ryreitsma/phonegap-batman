@@ -4,12 +4,12 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "nl.phonegap-batman.mobile"
-        version   = "0.0.1">
+        version   = "0.0.2">
 
-  <name>Phonegap Batman test</name>
+  <name>Coconut prototype</name>
 
   <description>
-   Phonegap test app using batman.js and an online Rails API
+   Prototype for the Coconut mobile app to test Batmanjs on mobile, infinite scroll and Phonegap build
   </description>
 
   <author href="http://www.coconutcenter.com" email="roelof.reitsma@spam.la">
