@@ -23,3 +23,5 @@ Then run `python cors_server.py` from inside this directory. It will start a sim
 
 Now you can access this sample app from **http://localhost:8000**.
 
+## Lesson learned
+Efforts in using this repository in Phonegap Build have failed; the Adobe Phonegap Build server needs a clean repository which does not contain all kinds of development files. If you compile all this into a seperate root directory, it will work. Checkout https://github.com/ryreitsma/phonegap-batman-build which demonstrates that building a Phonegap app based on this project is a viable strategy.
