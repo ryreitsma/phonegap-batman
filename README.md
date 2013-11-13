@@ -4,7 +4,7 @@ This application is created as proof of concept for a Phonegap app, using Batman
 
 This project is the front-end for a Rails scaffold, which you can use to supply the JSON datasource. That project can be found here:
 
-[](https://github.com/coconut-ogd/phonegap-batman-rails)
+https://github.com/coconut-ogd/phonegap-batman-rails
 
 Code assumes you have this Rails project running on localhost:3000
 
